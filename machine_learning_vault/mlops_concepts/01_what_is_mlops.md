@@ -109,6 +109,102 @@
 
 Roles in MLOPS: https://campus.datacamp.com/courses/mlops-concepts/introduction-to-mlops?ex=7
 
+- Roles involves in the machine learning life cycle.
+	- For each task different roles are required.
+	- 2 categories of roles: 
+		- Business roles.
+		- Technical roles.
+  
+- Business roles:
+	-  2 roles:
+		- Business stakeholder.
+		- Subject matter expert.
+
+- Business Stakeholder role:
+	- Sometimes also referred to as the product owner.
+	- Managerial staff. 
+	- Making budget decisions.
+	- Make sure that the machine learning project is aligned with the high-level vision of the company.
+	- Involved throughout the life cycle. 
+	- Define the business requirements during the design phase.
+	- In the development phase they also see whether the initial results from the experiments are satisfactory
+	- In the deployment phase, they examine whether the outcome of the life cycle is as expected.
+ 
+- Subject matter expert: 
+	- Has domain knowledge about the problem that we are trying to solve.
+	- It's involved throughout the life cycle because they can assist the more technical roles with interpreting the data and results at each step.
+
+- Technical roles:
+	- 5 technical roles.
+		- Data Engineer
+		- Data Scientist
+		- Software Engineer
+		- ML Engineer
+		- Backend Engineer. 
+
+- Data Engineer
+	- Responsible for:
+		- Collect
+		- Storing
+		- Processing 
+	- Tasks:
+		- Check data quality
+		- Include test such that the quality of is maintained throughout the process.
+	- Involved with tasks that have to do with the data:
+		- before training the model. 
+		- during the model training. 
+		- once the model is used in production.
+
+- Data Scientist
+	- Responsible for:
+		- Data analysis
+		- Model training
+		- Model evaluation
+			- This includes monitoring the model once it has been deployed to ensure that the model predictions are valid.
+	- We can find the data scientist in all phases of the life cycle, but mostly during the development phase.
+
+- Software Engineer:
+	- Mainly involved during the deployment phase.
+	- Write software to run the model. 
+	- Deploy the model.
+	- Monitor whether the model stays online once its deployed.
+	- Make sure the code is written in accordance with common guidelines.
+	- Since the deployment is an important part of the machine learning life cycle, the software engineer should also be included in the design phase.
+
+- Machine Learning Engineer:
+	- Relatively a new role.
+	- Quite versatile. 
+	- Have expertise over the entire machine learning life cycle.
+	- Cross functional role that overlaps with the other technical roles.
+	- Involved in all phases.
+	- Knows how to:
+		- Extract and store data
+		- Develop a machine learning model
+		- Deploy the machine learning model.
+
+- Backend Engineer:
+	- Mostly involved in setting up the cloud infrastructure to enable development and deployment of machine learning models. 
+		- Example:
+			- Database for storing the data. 
+			- Computers to run the machine learning model. 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
