@@ -106,9 +106,6 @@
 		- Implement the machine learning model in the business process.
 		- Do a weekly check of the machine learning model predictions.
  
-
-Roles in MLOPS: https://campus.datacamp.com/courses/mlops-concepts/introduction-to-mlops?ex=7
-
 - Roles involves in the machine learning life cycle.
 	- For each task different roles are required.
 	- 2 categories of roles: 
@@ -187,8 +184,6 @@ Roles in MLOPS: https://campus.datacamp.com/courses/mlops-concepts/introduction-
 		- Example:
 			- Database for storing the data. 
 			- Computers to run the machine learning model. 
-
-
 
   
 
