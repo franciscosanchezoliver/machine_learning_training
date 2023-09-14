@@ -1,6 +1,5 @@
 # Machine learning with scikit-learn
 
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification-1?ex=1
 In Machine learning computers learn to make decisions from data without being explicitly programmed.
 Examples: 
 	- Predicting if an email is spam or not given its content and sender. 
@@ -36,3 +35,66 @@ There are some requirements to satisfy before performing supervised learning.
 - Must be in a numeric format.
 
 Perform some exploratory analysis first to ensure data is in the correct format.
+- Descriptive statistics
+- Data visualizations
+
+# Binary classification
+
+We saw that there are two types of supervised learning: classification and regression. Recall that binary classification is used to predict a target variable that has only two labels, typically represented numerically with a zero or a one.
+
+A dataset, `churn_df`, has been preloaded for you.
+![[Pasted image 20230913081245.png]]
+
+Your task is to examine the data and choose which column could be the target variable for binary classification.
+
+- [ ] customer_service_calls
+- [ ] total_night_charge
+-  [X] churn
+	 has values of `0` or `1`, so it can be predicted using a binary classification model.
+- [ ] account_length
+
+## The classification challenge
+Let's discuss how we can build a classification model, or classifier, to predict the labels of unseen data.
+- Build a classifier which learns from the labeled data we pass to it.
+- Then we pass unlabeled data as input, and have it predict labels for this unseen data.
+
+As the classifier learns from the labeled data, we call this the training data.
+
+
+https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification-1?ex=4
+
+## K-Nearest Neighbors (KNN)
+
+We'll use an algorithm called K-Nearest Neighbors, which is popular for classification problems. 
+The idea of KNN is to predict the label of any data point by looking at the k (example 3) closest labeled data. And guessing them to vote on what label the unlabeled observation should have.
+
+KNN uses majority voting, which makes predictions based on what label the majority of nearest neighbors have. 
+
+Using the following scatter plot. 
+![[Pasted image 20230914071544.png]]
+
+How do we classify the black point?
+If k = 3, then we would classify it as a red point, this is because 2 of the 3 closest observations are red
+
+![[Pasted image 20230914071644.png]]
+
+
+if k = 5, we would classify it as blue.
+![[Pasted image 20230914072026.png]]
+
+To build some intuition for KNN, let's look at this scatter plot displaying total evening charge against total charge for customers of a telecom company. 
+The observations in blue for customers who have churned, and red for customers that have not churned. 
+
+![[Pasted image 20230914072132.png]]
+
+Here, we have visualized the results of a KNN algorithm where the number of neighbors is 15.
+![[Pasted image 20230914072619.png]]
+
+KNN creates a decision boundary to predict if customers will churn. So, any customer in the gray area are predicted to churn, and those in the area with a red background are predicted to not churn.
+
+This boundary would be used to make predictions on unseen data. 
+
+Basic exercise using KNN
+[github link](https://github.com/spuzi/machine_learning_training/blob/main/knn/knearest_neighbors_fit.py)
+
+
