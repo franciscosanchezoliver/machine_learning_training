@@ -31,16 +31,16 @@ There are 2 types of supervised learning:
 
 ## Before you use supervised learning
 There are some requirements to satisfy before performing supervised learning. 
-- Our data must not have missing values. 
-- Must be in a numeric format.
+- Our data must __not have missing values__. 
+- Must be in a __numeric format__.
 
-Perform some exploratory analysis first to ensure data is in the correct format.
+Perform some __exploratory analysis first__ to ensure data is in the correct format.
 - Descriptive statistics
 - Data visualizations
 
 # Binary classification
 
-We saw that there are two types of supervised learning: classification and regression. Recall that binary classification is used to predict a target variable that has only two labels, typically represented numerically with a zero or a one.
+We saw that there are two types of supervised learning: classification and regression. Recall that __binary classification__ is used to __predict a target variable that has only two labels__, typically represented numerically with a zero or a one.
 
 A dataset, `churn_df`, has been preloaded for you.
 ![[Pasted image 20230913081245.png]]
@@ -96,5 +96,4 @@ This boundary would be used to make predictions on unseen data.
 
 Basic exercise using KNN
 [github link](https://github.com/spuzi/machine_learning_training/blob/main/knn/knearest_neighbors_fit.py)
-
 
