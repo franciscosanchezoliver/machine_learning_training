@@ -11,7 +11,6 @@ n_neighbor values.
  - Try different K values (from 1 to 12) and save the train and test set scores got by each k value.
  - Visualize the model complexity curve to see how performance change as the model becomes less complex.
 
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification-1?ex=9
 """
 
 from sklearn.neighbors import KNeighborsClassifier
