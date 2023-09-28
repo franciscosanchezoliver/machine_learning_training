@@ -89,3 +89,15 @@ As k increases beyond 15 we see overfitting where performance plateaus on both t
 The peak test accuracy actually occurs at around 13 neighbors.
 ![[Pasted image 20230927073432.png]]
 
+## Exercises
+
+1. [Exercise](https://github.com/spuzi/machine_learning_training/blob/main/knn/01_knearest_neighbors_train_test_accuracy_comparison.py)
+	- Split data into train and test
+	- Use a KNN classifier
+	- Calculate the score with the test set.
+
+2. Exercise
+https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification-1?ex=9
+
+
+
