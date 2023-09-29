@@ -91,13 +91,13 @@ The peak test accuracy actually occurs at around 13 neighbors.
 
 ## Exercises
 
+- Split data into train and test
+- Use a KNN classifier
+
 1. [Exercise](https://github.com/spuzi/machine_learning_training/blob/main/knn/01_knearest_neighbors_train_test_accuracy_comparison.py)
-	- Split data into train and test
-	- Use a KNN classifier
 	- Calculate the score with the test set.
 
-2. Exercise
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/classification-1?ex=9
-
+2. [Exercise](https://github.com/spuzi/machine_learning_training/blob/main/knn/02_knn_overfitting_underfitting.py)
+	- Model Complexity Curve
 
 
