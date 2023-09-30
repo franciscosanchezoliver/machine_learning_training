@@ -14,9 +14,12 @@ An example of the dataset:
 You will use the advertising expenditure as features to predict sales values, initially working
 with the "radio" column. However, before you make any predictions you will need to create
 the feature and target arrays, reshaping them to the correct format for scikit-learn.
+
+Visualize the line created by the linear regression model.
 """
 
 from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
 import pandas as pd
 
 sales_df = pd.read_csv('./advertising_and_sales_clean.csv')
@@ -48,3 +51,16 @@ for i in range(10):
 
     print(
         f"{investment_done_in_radio} => {real_benefit_obtain}, {predicted_one} | {round(abs(real_benefit_obtain - predicted_one))}")
+
+# Plot the real values
+plt.scatter(X, y)
+
+# Draw a line with the predictions made.
+plt.plot(X, predictions_made, color='red')
+
+# Set a name for the axis
+plt.title("Radio Expenditure and Sales")
+plt.xlabel("Radio Expenditure ($)")
+plt.ylabel("Sales ($)")
+
+plt.show()
