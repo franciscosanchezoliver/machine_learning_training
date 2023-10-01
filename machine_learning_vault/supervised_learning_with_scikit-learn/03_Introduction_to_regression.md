@@ -104,10 +104,65 @@ When adding more features, it is known as multiple linear regression.
 
 Fitting a multiple linear regression model means specifying _n_ coefficients for a's (one per feature) and one _b_.
 
+Let's perform linear regression to predict blood glucose levels using all of the features from the diabetes dataset.
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, 
+												   test_size=0.3, 
+												   random_state=42)
+
+reg_all = LinearRegression()
+reg_all.fit(X_train, y_train)
+
+y_pred = reg_all.predict(X_test, y_test)
+```
+
+Linear regression performs OLS under the hood. 
+
+## R-squared
+
+The default  metric for linear regression is R-squared, which __quantifies the amount of variance in the target variable that is explained by the features__.
+
+Values can range from zero to one, with one meaning the features completely explain the target's variance. With one meaning that the feature completely explain the target's variance.
+
+Here we can see how a high and a low value for R-squared looks like:
+
+![[Pasted image 20231001080702.png]]
+
+To compute R-squared:
+```python
+r_squared = reg_all.score(X_test, y_test)
+```
+
+In this case r_squared = 0.35. This means that the features only explain the 35% of the blood glucose level variance.
 
 
+## Mean Squared Error and Root Mean Squared Error
+
+Another way to assess a regression model's performance is to take the __mean of the residual sum of squares__, this is known as the _Mean Squared Error (MSE)_.
+
+$$ MSE = \frac{1}{n} \sum_{i=1}^{n} {(y_i - \hat{y}_i)^2 } = \frac{1}{n} RSS $$
+
+MSE is measure in units of our target variable, squared. For example if a model is prediction a dollar value, MSE will be in dollars squared. To convert to dollars, we can take the squared root, known as the root mean squared.
+
+$$ RMSE = \sqrt{MSE}$$
+
+Example of how calculate _RMSE_:
+```python
+from sklearn.metrics import mean_squared_error
+
+# To calculate RMSE, we have tu use the method 'mean_squared_error' and
+# the pass parameter 'squared' to False.
+mean_squared_error(y_test, y_pred, squared=False)
+
+print("24.02")
+```
+
+This result means that the model has an average error for blood glucose levels of around 24 (mg/dl).
 
 
-
-
-
+Exercise: 
+https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-6320c92e-31c3-48fb-9382-6a9169125722?ex=6
