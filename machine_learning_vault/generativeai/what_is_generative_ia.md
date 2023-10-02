@@ -59,3 +59,24 @@ Many of those models need powerful GPUs, but are available in the cloud.
 	- Audio Generation:
 		- Narration
 		- Music composition	
+
+- Synthetic data generation:
+	- Increase size, diversity of a dataset.
+	- Privacy protection
+	- Simulate scenarios
+	- Fraud detection, network attack detection
+- Synthetic data for computer vision (e.g. autonomous cars):
+	- Object detection
+	- Adversarial scenarios (weather, road condition)
+- Synthetic text for natural language processing.
+
+
+- Generative design
+	- Drug discovery
+	- Product and material design
+	- Chip design
+	- Architectural design and urban planning.
+
+
+https://customer-academy.databricks.com/learn/course/1765/play/12440/llms-and-generative-ai;lp=275
+
