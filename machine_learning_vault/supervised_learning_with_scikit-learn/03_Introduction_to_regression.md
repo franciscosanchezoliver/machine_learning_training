@@ -165,4 +165,4 @@ This result means that the model has an average error for blood glucose levels o
 
 
 Exercise: 
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-6320c92e-31c3-48fb-9382-6a9169125722?ex=6
+[Example](https://github.com/spuzi/machine_learning_training/blob/main/regression/01_multiple_linear_regression.py)
