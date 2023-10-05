@@ -11,10 +11,13 @@ the individual score for each of the six-folds.
 To do:
 - Predict the sales using the investing in radio and social media.
 - Use cross validation and a linear regression.
+- Analyze the results obtain by the cross validation:
+    - Calculate: mean, standard deviation and 95% confidence interval.
 """
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold, cross_val_score
 import pandas as pd
+import numpy as np
 
 sales_df = pd.read_csv("./advertising_and_sales_clean.csv")
 
@@ -49,4 +52,9 @@ Linear Regression
 
 Cross Validation scores ({number_of_folds} folds)
 {cross_val_scores}
+
+    CV Statistics:
+        - Mean : {np.mean(cross_val_scores)}
+        - Standard deviation: {np.std(cross_val_scores)} 
+        - 95% confidence interval: {np.quantile(cross_val_scores, [0.025, 0.975])}
 """)

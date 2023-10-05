@@ -89,7 +89,6 @@ We could try to minimize the sum of residuals but then each positive residual wo
 ![[Pasted image 20230930090027.png]]
 
 To avoid this we squared the residuals. By adding all the squared residuals, we calculate the sum of squares, or RSS.
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-6320c92e-31c3-48fb-9382-6a9169125722?ex=5
 
 $$ RSS = \sum_{i=1}^{n} (y_i - \hat{y_i})^2  $$
 This type of linear regression is called _Ordinary Least Squares (OLS)_ while we trying to minimize the RSS. 
