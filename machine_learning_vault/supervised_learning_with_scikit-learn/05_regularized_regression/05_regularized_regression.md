@@ -130,10 +130,6 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-<img src="./imgs/lasso_feature_importance.png" />
-
-![[lasso_feature_importance.png]]
-
 ![hola](./imgs/lasso_feature_importance.png)
 
 We can see that the most important predictor for our target variable (blood glucose levels) is the binary value for whether an individual has diabetes or not.
