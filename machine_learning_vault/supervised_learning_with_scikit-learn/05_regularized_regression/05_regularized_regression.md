@@ -130,7 +130,9 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-![[Pasted image 20231006080427.png]]
+<img src="./imgs/lasso_feature_importance.png" />
+
+![[lasso_feature_importance.png]]
 
 
 We can see that the most important predictor for our target variable (blood glucose levels) is the binary value for whether an individual has diabetes or not.
@@ -138,4 +140,8 @@ We can see that the most important predictor for our target variable (blood gluc
 This type of feature selection is very important because it allows us to communicate results to non-technical audiences.
 
 Exercise:
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/regression-6320c92e-31c3-48fb-9382-6a9169125722?ex=12
+[Exercise](https://github.com/spuzi/machine_learning_training/blob/main/regression/03_linear_regression_with_ridge_regularization.py)
+
+
+
+<img src="https://i.gifer.com/fyrV.gif" />
