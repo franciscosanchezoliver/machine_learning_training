@@ -10,7 +10,8 @@ Examples:
 Unsupervised learning is the process of uncovering hidden patterns and structures from unlabeled data.
 Example: 
 A business may wish to group its customers into distinct categories based on their purchasing behavior without knowing in advance what these categories are. This is known as clustering, one branch of unsupervised learning.
-![[Pasted image 20230913073612.png]]
+
+![cluster analysis for customer churn](imgs/cluster_analysis_for_customer_churn.png)
 
 ## Supervised Learning
 Supervised learning is a type of machine learning where the values to be predicted are already known, and a model is built with the aim of accurately predicting values of previously unseen data.
