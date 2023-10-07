@@ -1,2 +1,3 @@
+# :robot: Machine Learning Theory and Exercises 🦾
 
-<img src="https://66.media.tumblr.com/43ff1ae84968ffd84606207e9995a78e/tumblr_py4mvbGe6h1tgo74ho1_1280.gif" />
+ <img src="https://media.tenor.com/XXSfP1MK-OMAAAAd/terminator-artificial-intelligence.gif" />
