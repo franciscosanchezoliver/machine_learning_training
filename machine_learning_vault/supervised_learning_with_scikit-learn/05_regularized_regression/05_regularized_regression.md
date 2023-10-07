@@ -138,7 +138,3 @@ This type of feature selection is very important because it allows us to communi
 
 Exercise:
 [Exercise](https://github.com/spuzi/machine_learning_training/blob/main/regression/03_linear_regression_with_ridge_regularization.py)
-
-
-
-<img src="https://i.gifer.com/fyrV.gif" />
