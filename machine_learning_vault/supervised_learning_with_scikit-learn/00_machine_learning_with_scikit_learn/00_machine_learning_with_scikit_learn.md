@@ -1,47 +1,66 @@
 # Machine learning with scikit-learn
 
-In Machine learning computers learn to make decisions from data without being explicitly programmed.
+In Machine learning computers learn to make decisions from data without 
+being explicitly programmed.
+
 Examples: 
-	- Predicting if an email is spam or not given its content and sender. 
-	- Learn to cluster books to one exiting cluster based on the words they contain, then assigning any new book to one of the existing clusters.
+- Predicting if an email is spam or not given its content and sender. 
+- Learn to cluster books to one exiting cluster based on the words they contain, then assigning any new book to one of the existing clusters.
 
 
 ## Unsupervised Learning
-Unsupervised learning is the process of uncovering hidden patterns and structures from unlabeled data.
-Example: 
-A business may wish to group its customers into distinct categories based on their purchasing behavior without knowing in advance what these categories are. This is known as clustering, one branch of unsupervised learning.
+Unsupervised learning is the process of __uncovering hidden patterns 
+and structures from unlabeled data__.
+
+### Example: 
+A business may wish to __group its customers into distinct categories based 
+on their purchasing behavior without knowing in advance what these 
+categories are__. This is known as clustering, one branch of unsupervised learning.
 
 ![cluster analysis for customer churn](imgs/cluster_analysis_for_customer_churn.png)
 
-## Supervised Learning
-Supervised learning is a type of machine learning where the values to be predicted are already known, and a model is built with the aim of accurately predicting values of previously unseen data.
 
-Supervised learning uses features to predict the values of a target variable. Such as predicting a basketball player's position based on their points per game.
-![[Pasted image 20230913074237.png]]
+## Supervised Learning
+Supervised learning is a __type of machine learning where the values to 
+be predicted are already known__, and a model is built with the aim of 
+accurately predicting values of previously unseen data.
+
+Supervised learning uses features to predict the values of a 
+target variable. Such as predicting a basketball player's position based 
+on their points per game.
+
+![features and target for basketball](imgs/features_and_target_for_basket.png)
 
 We'll focus on supervised learning for now.
 
 ## Types of supervised learning
-There are 2 types of supervised learning:
-- Classification: used to predict the label (or category) of an observation.
-	Example: predict whether a bank transaction is fraudulent or not. As there are two outcomes here fraudulent/not fraudulent this is known as binary classification.
- 
-- Regression: used to predict continuous values. 
-	Example: a model can use features such as number of bedrooms, ad the size of a property, to predict the price of the property.
+There are __2 types of supervised learning__:
+- __Classification__: used to __predict the label (or category) of an observation__.
+
+	Example: predict whether a bank transaction is fraudulent or not. As there 
+    are two outcomes here fraudulent/not fraudulent this is known as 
+  	binary classification. <br><br>
+
+- __Regression__: used to predict continuous values.<br>
+    Example: a model can use features such as number of bedrooms, ad the size 
+    a property, to predict the price of the property.
 
 
-## Before you use supervised learning
-There are some requirements to satisfy before performing supervised learning. 
-- Our data must __not have missing values__. 
-- Must be in a __numeric format__.
+## Before using supervised learning
+1. There are some requirements to satisfy before performing supervised learning. 
+   - Our data must __not have missing values__. 
+   - Must be in a __numeric format__.
 
-Perform some __exploratory analysis first__ to ensure data is in the correct format.
-- Descriptive statistics
-- Data visualizations
+2. Perform some __exploratory analysis first__ to ensure data is in the correct format.
+   - Descriptive statistics
+   - Data visualizations
 
 # Binary classification
 
-We saw that there are two types of supervised learning: classification and regression. Recall that __binary classification__ is used to __predict a target variable that has only two labels__, typically represented numerically with a zero or a one.
+We saw that there are two types of supervised learning: classification and 
+regression. Recall that __binary classification__ is used to __predict a 
+target variable that has only two labels__, typically represented numerically 
+with a zero or a one.
 
 A dataset, `churn_df`, has been preloaded for you.
 ![[Pasted image 20230913081245.png]]
