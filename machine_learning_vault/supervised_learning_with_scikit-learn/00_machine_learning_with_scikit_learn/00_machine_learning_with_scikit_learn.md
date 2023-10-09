@@ -1,4 +1,4 @@
-# Machine learning with scikit-learn
+<h1>Machine learning with scikit-learn</h1>
 
 In Machine learning computers learn to make decisions from data without 
 being explicitly programmed.
@@ -8,11 +8,11 @@ Examples:
 - Learn to cluster books to one exiting cluster based on the words they contain, then assigning any new book to one of the existing clusters.
 
 
-## Unsupervised Learning
+<h2>Unsupervised Learning</h2>
 Unsupervised learning is the process of __uncovering hidden patterns 
 and structures from unlabeled data__.
 
-### Example: 
+<h3>Example</h3>
 A business may wish to __group its customers into distinct categories based 
 on their purchasing behavior without knowing in advance what these 
 categories are__. This is known as clustering, one branch of unsupervised learning.
@@ -20,7 +20,7 @@ categories are__. This is known as clustering, one branch of unsupervised learni
 ![cluster analysis for customer churn](imgs/cluster_analysis_for_customer_churn.png)
 
 
-## Supervised Learning
+<h2>Supervised Learning</h2>
 Supervised learning is a __type of machine learning where the values to 
 be predicted are already known__, and a model is built with the aim of 
 accurately predicting values of previously unseen data.
@@ -97,6 +97,7 @@ __KNN uses majority voting__, which makes predictions based on what label the ma
 neighbors have. 
 
 Using the following scatter plot. 
+
 ![knn point not classified](imgs/knn_point_not_classified.png)
 
 
