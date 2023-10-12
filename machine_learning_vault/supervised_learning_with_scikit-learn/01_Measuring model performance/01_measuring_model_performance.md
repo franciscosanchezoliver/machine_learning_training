@@ -34,7 +34,7 @@ Now that we know how to make predictions using a classifier. __How can we know
 if a model is making correct predictions?__
 We can __evaluate its performance__.
 
-<h2 id='accuracy'>Accuracy</h2>
+<h2 id="accuracy">Accuracy</h2>
 
 __In classification accuracy is a commonly used metric__.
 
@@ -46,7 +46,7 @@ of how well it can generalize to unseen data.__
 
 That's why it is common to __split the data into a training set and a test set.__
 
-<h2 id='split_data_into_train_and_test_sets'>Split data into Train and Test sets</h2>
+<h2 id="split_data_into_train_and_test_sets">Split data into Train and Test sets</h2>
 
 The __training set is used to fit the classifier__. And the __test set is used 
 to calculate the model's accuracy__ against the test set labels.
@@ -80,7 +80,7 @@ print(knn.score(X_test, y_test))
 ```
 
 
-<h2 id='model_complexity'>Model complexity</h2> 
+<h2 id="model_complexity">Model complexity</h2> 
 Let's discuss how to interpret the hyperparameter K (number of neighbors). Recall that we 
 discussed __decision boundaries__, which are __thresholds for determining what label a model 
 assigns to an observation__.
@@ -95,7 +95,7 @@ __Simpler models are less able to detect relationships in the dataset__, which i
 In contrast, __complex models can be sensitive to noise in the training data, rather 
 than reflecting general trends, this is known as overfitting.__
 
-<h2 id='model_complexity_curve'>Model complexity curve</h2>
+<h2 id="model_complexity_curve">Model complexity curve</h2>
 
 Se can also interpret K using a model complexity curve, with a KNN model, we can calculate 
 accuracy on the training and test sets using incremental K values, and plot the results.
@@ -147,7 +147,7 @@ The peak test accuracy actually occurs at around 13 neighbors.
 
 ![Peak performance with K](imgs/peak_performance_knn.png)
 
-<h2 id='exercises'>Exercises</h2> 
+<h2 id="exercises">Exercises</h2> 
 
 1. [Calculate the score with the test set](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/knn/01_knn_train_test_accuracy_comparison.py)
 2. [Model Complexity Curve](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/knn/02_knn_overfitting_underfitting.py)
