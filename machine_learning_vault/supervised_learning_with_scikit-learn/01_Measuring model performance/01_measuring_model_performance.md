@@ -64,8 +64,8 @@ stratify: make sure that the target variable is in the same proportion
 """
 X_train, X_test, y_train, y_test = train_test_split(X, y, 
                                                     test_size=0.3,
-													random_state=21,
-													stratify=y)
+                                                    random_state=21,
+                                                    stratify=y)
 ```
 
 It is best practice to __ensure our split reflects the proportion of labels in our data__. 
