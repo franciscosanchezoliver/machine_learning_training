@@ -95,4 +95,45 @@ Hallucination is a phenomenon where the model might generate outputs that are po
 
 https://customer-academy.databricks.com/learn/course/1765/play/12490/llm-applications;lp=275
 
-If you decide to train a pre
+If you decide to pre train a base model you can also fine tune it.
+
+## Fine Tuned Models
+
+Its the process of further training a pre-trained model on a specific task or dataset to adapt it for a particular application or domain.
+
+When you say open source models, you have 2 options:
+- Using them as they are
+- Fine tuning them based on your specific use case.
+
+Similarly some proprietary models also allow for fine tuning.
+
+Fine tuning is a crucial concept in generative AI, so lets delve  into its definition and how it is applied for different use cases.
+
+Fine tuning a model involves taking an already trained model and further train it to perform a specific task or adapt it for a particular application or domain.
+
+Typically a foundation model is initially trained on a large data set. 
+![[Pasted image 20231005130207.png]]
+
+Then you take the foundation model and train it on a smaller dataset, improving its predictive capabilities based on your specific use cases.
+![[Pasted image 20231005130411.png]]
+
+### Fine-tuning models for specific tasks
+
+So lets se you want to fine-tuned models for specific tasks, like question answering, sentiment analysis, or name entity recognition. To accomplish this, you start with a foundation model and engage with supervised training using smaller labeled datasets, this process train the model to perform your desired tasks, for instance, if you need your model to answer questions, you'll provide it with questions-answers pairs to train it accordingly. 
+
+If you are focusing on sentiment analysis, you might use text messages, or customers reviews to train the model.
+
+Alternatively, you can label people names or locations in a dataset to train the model for name entity recognition.
+![[Pasted image 20231005131523.png]]
+
+
+### Fine-tuning models for domain adaptation
+
+Let's say you are fine-tuning the model for domain adaptation, focusing on science, finance, and legal domains.
+
+To accomplish this, you would use scientific journals, financial documents, or legal documents. To adapt the model specifically for your use cases. 
+
+This process helps the model to learn domain specific knowledge and enhance the performance in the respective fields.
+
+![[Pasted image 20231005132504.png]]
+
