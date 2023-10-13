@@ -1,21 +1,23 @@
 """
-Creating features
------------------
-You will work with a dataset called "sales_df", which contains information on advertising campaign
-expenditure across different media types, and the number of dollars generated in sales for the
-respective campaign.
+Linear Regression with one feature
+----------------------------------
 
-An example of the dataset:
+You will work with a dataset called with marketing sales data, which contains information
+on advertising campaign expenditure across different media types, and the number of
+dollars generated in sales for the respective campaign.
+
+Example of the dataset:
 
      tv        radio      social_media    sales
 1    13000.0   9237.76    2409.57         46677.90
 2    41000.0   15886.45   2913.41         150177.83
 
-You will use the advertising expenditure as features to predict sales values, initially working
-with the "radio" column. However, before you make any predictions you will need to create
-the feature and target arrays, reshaping them to the correct format for scikit-learn.
+We will try to predict the amount of money earn just by seeing the amount of money invested in radio.
 
-Visualize the line created by the linear regression model.
+To do:
+    - Use a linear regression model to predict the money earn using the
+      money invested in radio
+    - Visualize the line created by the linear regression model.
 """
 
 from sklearn.linear_model import LinearRegression
@@ -43,6 +45,8 @@ predictions_made = reg.predict(X)
 
 print("Showing the first 10 predictions made")
 print("Investment in Radio => Real Benefit, Predicted  | diff")
+
+# Show the money invested in radio, the real money obtained and the predicted one.
 for i in range(10):
     investment_done_in_radio = round(X[i][0], 2)
 
@@ -55,7 +59,7 @@ for i in range(10):
 # Plot the real values
 plt.scatter(X, y)
 
-# Draw a line with the predictions made.
+# Draw a line with the predictions made
 plt.plot(X, predictions_made, color='red')
 
 # Set a name for the axis
