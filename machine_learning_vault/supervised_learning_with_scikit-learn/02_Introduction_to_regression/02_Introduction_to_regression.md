@@ -69,33 +69,44 @@ plt.show()
 The relation between blood glucose and body mass index appear to have a moderate positive correlation.
 
 <h2>Exercise</h2>
-[Exercise](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/00_linear_regression_with_one_feature.py)
+[Linear regression with one feature](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/00_linear_regression_with_one_feature.py)
 
-## Basics of linear regression
+<h2>Basics of linear regression</h2>
 
-We want to fit a line to the data, and in 2 dimensions this takes the form of:
+__We want to fit a line to the data__, and in 2 dimensions this takes the form of:
+
 $$ y = ax + b$$
-Using a single feature is known as 'simple linear regression', where _y_ is the target, _x_ is the feature and  _a_ and _b_ are the model parameters that we want to learn.
 
-_a_ and _b_ are also called the 'model coefficients', or a (slope) and b (intercept).
+__Using a single feature is known as 'simple linear regression'__, 
+where __ _y_ is the target, _x_ is the feature and  _a_ and _b_ are the model__ 
+parameters that we want to learn.
 
-To choose values for _a_ and _b_ we define an error function and then choose the parameters that minimize this function (line that minimize the error function).
+___a_ and _b_ are also called the 'model coefficients', or a (slope) and b (intercept)__.
 
-Error functions are also called _loss_ or _cost functions_. 
+To choose values for _a_ and _b_ __we define an error function and then choose 
+the parameters that minimize this function__ (line that __minimize the error function__).
 
-We want the line to be as close to the observations as possible. Therefore, we want to minimize the vertical distance between the fit and the data:
+__Error functions are also called loss or cost functions__. 
 
-![[Pasted image 20230930085307.png]]
+We want the line to be as close to the observations as possible. Therefore, 
+__we want to minimize the vertical distance between the fit and the data__:
 
-The distance between each point and the line is called _Residual_. 
+![Distance made by the predicted and the real one](imgs/distance_between_line_and_real_value.png)
 
-We could try to minimize the sum of residuals but then each positive residual would cancel out each negative residual. 
-![[Pasted image 20230930090027.png]]
+The __distance between each point and the line is called _Residual___. 
 
-To avoid this we squared the residuals. By adding all the squared residuals, we calculate the sum of squares, or RSS.
+We could __try to minimize the sum of residuals__ but then each positive residual 
+would cancel out each negative residual. 
+
+![Canceling residuals](imgs/canceling_residuals.png)
+
+To avoid this we squared the residuals. By adding all the __squared residuals__, 
+__we calculate the sum of squares, or RSS.__
 
 $$ RSS = \sum_{i=1}^{n} (y_i - \hat{y_i})^2  $$
-This type of linear regression is called _Ordinary Least Squares (OLS)_ while we trying to minimize the RSS. 
+
+This type of linear regression is called _Ordinary Least Squares (OLS)_ while we're
+trying to minimize the RSS. 
 
 When we have 2 features and one target the line will have the following formula:
 $$ y = a_1  x_1 + a_2 x_2 + b $$
@@ -103,19 +114,21 @@ $$ y = a_1  x_1 + a_2 x_2 + b $$
 So, to fit a linear regression model we need to specify 3 variables: 
 $$a1, a2, b$$
 
-When adding more features, it is known as multiple linear regression.
+__When adding more features, it is known as multiple linear regression.__
 
-Fitting a multiple linear regression model means specifying _n_ coefficients for a's (one per feature) and one _b_.
+Fitting a multiple linear regression model means specifying _n_ coefficients 
+for a's (one per feature) and one _b_.
 
-Let's perform linear regression to predict blood glucose levels using all of the features from the diabetes dataset.
+Let's perform linear regression to predict blood glucose levels using 
+all the features from the diabetes dataset.
 
 ```python
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, 
-												   test_size=0.3, 
-												   random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                                    test_size=0.3,
+                                                    random_state=42)
 
 reg_all = LinearRegression()
 reg_all.fit(X_train, y_train)
@@ -123,9 +136,9 @@ reg_all.fit(X_train, y_train)
 y_pred = reg_all.predict(X_test, y_test)
 ```
 
-Linear regression performs OLS under the hood. 
+__Linear regression performs OLS under the hood.__ 
 
-## R-squared
+<h2>R-squaredz</h2>
 
 The default  metric for linear regression is R-squared, which __quantifies the amount of variance in the target variable that is explained by the features__.
 
