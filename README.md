@@ -19,6 +19,11 @@
            Introduction to regression 
         </a>
     </li>
+    <li>
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/02_cross_val_for_r_squared.py">
+          Cross validation 
+        </a>
+    </li>
 </ul>
 
 

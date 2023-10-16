@@ -38,7 +38,8 @@ linear_regression = LinearRegression()
 
 # Compute the cross validation score.
 cross_val_scores = cross_val_score(linear_regression,
-                                   X, y, cv=folds)
+                                   X, y,
+                                   cv=folds)
 
 print(f"""
 Features
