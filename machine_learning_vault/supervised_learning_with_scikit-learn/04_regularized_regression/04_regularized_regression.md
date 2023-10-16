@@ -1,36 +1,40 @@
-Regularized regression is a technique used to avoid overfitting.
+<h2 id="regularized_regression">Regularized Regression</h2>
 
-Recall that fitting a linear regression minimizes a loss function to choose a coefficient _a_ (for each feature) and the intercept _b_.
+__Regularized regression is a technique used to avoid overfitting.__
 
-__If we allow these coefficients to be very large, we can get overfitting__. Therefore, it is common practice to alter the loss function so that it __penalizes large coefficients__. This is called _regularization_.
+Recall that __fitting a linear regression minimizes a loss function to choose 
+a coefficient _a_ (for each feature) and the intercept _b_.__
+
+__If we allow these coefficients to be very large, we can get overfitting__. Therefore, it 
+is common practice to __alter the loss function so that it penalizes large coefficients. This 
+is called _regularization_.__
 
 
-## Ridge Regression
+<h2 id="ridge_regression">Ridge Regression</h2>
 
-The first type of regularized regression that we'll look at is called ridge. With ridge, we use the Ordinary Least Squares (OLS) loss function:
+The first type of regularized regression that we'll look at is called _'Ridge'_. With ridge, 
+we use the __Ordinary Least Squares (OLS) loss function__.
 
----------------
-![[Pasted image 20230930090027.png]]
+So we can __calculate the Ridge loss function with the sum of the normal OLS loss function 
+and the _normalization_ that is calculated multiplying an alpha to the sum of the 
+squared values of each coefficient__.
 
-To avoid this we squared the residuals. By adding all the squared residuals, we calculate the sum of squares, or RSS.
-
-$$ RSS = \sum_{i=1}^{n} (y_i - \hat{y_i})^2  $$
-This type of linear regression is called _Ordinary Least Squares (OLS)_ while we trying to minimize the RSS. 
-
---------------------------
-
-So we can calculate the Ridge loss function with the sum of the normal OLS loss function and the _normalization_ that is calculated multiplying a alpha to the sum of the squared values of each coefficient.
 Plus the squared value of each coefficient, multiplied by a constant, alpha. 
+
 $$Ridge\ loss\ function = OLS\ loss\ function + \alpha * \sum_{i=1}^{n} a_i^2 $$
-So, when minimizing the loss function, _models are penalized for coefficients with large positive or negative values_.
 
-When using ridge _we need to choose the alpha value_ in order to fit and predict.
+So, when minimizing the loss function, __models are penalized for coefficients with 
+large positive or negative values__.
 
-Essentially, we can _select the alpha for which our model performs best_.
+When using ridge __we need to choose the alpha value in order to fit and predict__.
 
-Alpha controls model complexity, __when alpha = 0__ then there is __no normalization__, so its just a OLS function and __this can lead to overfitting__.
+Essentially, we can __select the alpha for which our model performs best__.
 
-A large alpha means that large coefficients are significantly penalized, which can lead to underfitting.
+Alpha controls model complexity, __when alpha = 0__ then there is __no normalization__, 
+so it is just a OLS function and __this can lead to overfitting__.
+
+A large alpha means that large coefficients are significantly penalized, which can 
+lead to underfitting.
 
 ```python
 from sklearn.linear_model import Ridge
@@ -61,7 +65,7 @@ print(scores)
 ```
 
 
-## Lasso Regression
+<h2 id="lasso_regression">Lasso Regression</h2>
 
 There is another type of regularization called _lasso_, where our loss function is our OLS loss function plus the absolute value of each coefficient multiplied by some constant alpha.
 $$Lasso\ loss\ function = OLS\ loss\ function + \alpha * \sum_{i=1}^{n} |{a_i}| $$
