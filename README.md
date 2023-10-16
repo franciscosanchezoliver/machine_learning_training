@@ -20,7 +20,7 @@
         </a>
     </li>
     <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/02_cross_val_for_r_squared.py">
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/machine_learning_vault/supervised_learning_with_scikit-learn/03_Cross_Validation/03_Cross_Validation.md">
           Cross validation 
         </a>
     </li>
