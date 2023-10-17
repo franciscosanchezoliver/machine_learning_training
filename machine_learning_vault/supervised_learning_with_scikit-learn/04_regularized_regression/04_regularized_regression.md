@@ -1,3 +1,28 @@
+<h1>Index</h1>
+
+<ul>
+    <li>
+        <a href="#regularized_regression">
+            Regularized Regression
+        </a>
+    </li>
+    <li>
+        <a href="#ridge_regression">
+           Ridge Regression 
+        </a>
+    </li>
+    <li>
+        <a href="#lasso_regression">
+           Lasso Regression
+        </a>
+    </li>
+    <li>
+        <a href="#exercise_linear_regression_with_ridge_regularization">
+            Linear regression with Ridge regularization         
+        </a>
+    </li>
+</ul>
+
 <h2 id="regularized_regression">Regularized Regression</h2>
 
 __Regularized regression is a technique used to avoid overfitting.__
@@ -67,8 +92,12 @@ print(scores)
 
 <h2 id="lasso_regression">Lasso Regression</h2>
 
-There is another type of regularization called _lasso_, where our loss function is our OLS loss function plus the absolute value of each coefficient multiplied by some constant alpha.
+There is another type of regularization called _lasso_, where our __loss function is 
+our OLS loss function plus the absolute value of each coefficient multiplied by 
+some constant alpha.__
+
 $$Lasso\ loss\ function = OLS\ loss\ function + \alpha * \sum_{i=1}^{n} |{a_i}| $$
+
 ```python
 from sklearn.linear_model import Lasso
 
@@ -97,11 +126,11 @@ print(score)
 # [0.9999, 0.9996,  0.9388, 0.7485, -0.057]
 ```
 
-__Lasso regression can actually be used to assess feature importance__. 
+__Lasso regression can be used to assess feature importance__. 
 
 This is because it tends to __shrink the coefficients of less important features to zero__. 
 
-The features whose coefficients are not shrunk to zero are selected by the lasso algorithm.
+The __features whose coefficients are not shrunk to zero are selected__ by the lasso algorithm.
 
 
 ```python
@@ -134,11 +163,15 @@ plt.xticks(rotation=45)
 plt.show()
 ```
 
-![hola](./imgs/lasso_feature_importance.png)
+![feature importance by lasso](./imgs/lasso_feature_importance.png)
 
-We can see that the most important predictor for our target variable (blood glucose levels) is the binary value for whether an individual has diabetes or not.
+We can see that the most important predictor for our target variable (blood glucose levels) 
+is the binary value for whether an individual has diabetes or not.
 
-This type of feature selection is very important because it allows us to communicate results to non-technical audiences.
+__This type of feature selection is very important because it allows us to communicate results 
+to non-technical audiences.__
 
-Exercise:
-[Exercise](https://github.com/spuzi/machine_learning_training/blob/main/regression/03_linear_regression_with_ridge_regularization.py)
+<h2 id="exercise_linear_regression_with_ridge_regularization">Exercise</h2>
+[Linear regression with Ridge regularization](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/03_linear_regression_with_ridge_regularization.py)
+
+
