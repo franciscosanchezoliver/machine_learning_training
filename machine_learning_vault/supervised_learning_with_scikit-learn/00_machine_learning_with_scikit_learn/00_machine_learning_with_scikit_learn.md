@@ -1,39 +1,17 @@
-<h1>
-        <a href="#machine_learning_with_scikit_learning">Machine learning with scikit learn</a>
-</h1>
-<ul>
-    <li>
-        <a href="#unsupervised_learning">Unsupervised learning</a>
-    </li>
-    <li>
-        <a href="#supervised_learning">Supervised learning</a>
-        <ul>
-            <li>
-                <a href="#types_of_supervised_learning">Types of supervised learning</a>
-            </li>
-            <li>
-                <a href="#before_using_supervised_learning">Before using supervised learning</a>
-            </li>
-            <li>
-                <a href="#binary_classification">Binary classification</a>
-            </li>
-            <li>
-                <a href="#steps_to_build_a_classification_model">Steps to build a classification model</a>
-            </li>
-            <li>
-                <a href="#k_nearest_neighbors">K-Nearest Neighbors (KNN)</a>
-            </li>
-            <li>
-                <a href="#knn_example_exercise">KNN example exercise</a>
-            </li>
-        </ul>
-    </li>
+# Index 
 
-</ul>
+- Machine learning with scikit learn
+- Unsupervised learning
+- Supervised learning
+  - Types of supervised learning
+  - Before using supervised learning
+  - Binary classification
+  - Steps to build a classification model
+  - K-Nearest Neighbors (KNN)
+  - KNN example exercise
 
 
-
-<h1 id="machine_learning_with_scikit_learning">Machine learning with scikit-learn</h1>
+# Machine learning with scikit-learn
 
 In Machine learning computers learn to make decisions from data without 
 being explicitly programmed.
@@ -43,11 +21,12 @@ Examples:
 - Learn to cluster books to one exiting cluster based on the words they contain, then assigning any new book to one of the existing clusters.
 
 
-<h2 id='unsupervised_learning'>Unsupervised Learning</h2>
+## Unsupervised Learning
 Unsupervised learning is the process of __uncovering hidden patterns 
 and structures from unlabeled data__.
 
-<h3>Example</h3>
+Example:
+
 A business may wish to __group its customers into distinct categories based 
 on their purchasing behavior without knowing in advance what these 
 categories are__. This is known as clustering, one branch of unsupervised learning.
@@ -55,7 +34,8 @@ categories are__. This is known as clustering, one branch of unsupervised learni
 ![cluster analysis for customer churn](imgs/cluster_analysis_for_customer_churn.png)
 
 
-<h2 id='supervised_learning'>Supervised Learning</h2>
+## Supervised Learning
+
 Supervised learning is a __type of machine learning where the values to 
 be predicted are already known__, and a model is built with the aim of 
 accurately predicting values of previously unseen data.
@@ -68,7 +48,8 @@ on their points per game.
 
 We'll focus on supervised learning for now.
 
-<h2 id="types_of_supervised_learning">Types of supervised learning</h2>
+Types of supervised learning
+
 There are __2 types of supervised learning__:
 - __Classification__: used to __predict the label (or category) of an observation__.
 
@@ -90,15 +71,14 @@ There are __2 types of supervised learning__:
    - Descriptive statistics
    - Data visualizations
 
-<h2 id='binary_classification'>Binary classification</h2>
+Binary classification
 
 We saw that there are two types of supervised learning: classification and 
 regression. Recall that __binary classification__ is used to __predict a 
 target variable that has only two labels__, typically represented numerically 
 with a zero or a one.
 
-<h3>Exercise</h3>
-Given the following dataset:
+Exercise:
 
 ![churn data example](imgs/churn_dataset_example.png)
 
@@ -111,7 +91,7 @@ Which column could be the target variable for binary classification?
 	has values of 0 or 1, so it can be predicted using a binary classification model.
 - [ ] account_length
 
-<h2 id='steps_to_build_a_classification_model'>Steps to build a classification model</h2>
+## Steps to build a classification model
 Let's discuss how we can build a classification model, or classifier, to predict 
 the labels of unseen data.
 
@@ -122,7 +102,7 @@ Steps to build the model:
 As the classifier learns from the labeled data, we call this the training data.
 
 
-<h2 id='k_nearest_neighbors'>K-Nearest Neighbors (KNN)</h2>
+## K-Nearest Neighbors (KNN)
 
 We'll use an algorithm called __K-Nearest Neighbors, which is popular for classification problems__. 
 The idea of KNN is to __predict the label of any data point by looking at the k (example 3) closest 
@@ -137,6 +117,7 @@ Using the following scatter plot.
 
 
 How do we classify the black point?
+
 If k = 3, then we would classify it as a red point, this is because 2 of the 3 
 closest observations are red
 
@@ -165,7 +146,8 @@ with a red background are predicted to not churn.
 
 This boundary would be used to make predictions on unseen data. 
 
-<h2 id='knn_example_exercise'>KNN example exercise</h3>
+## KNN example exercise
+
 [link to file](https://github.com/spuzi/machine_learning_training/blob/main/knn/00_knn_fit.py)
 
 ```python
