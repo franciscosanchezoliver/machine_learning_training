@@ -1,40 +1,22 @@
-<h1>
-        <a href="#intro_measuring_model_performance">Measuring model performance</a>
-</h1>
-<ul>
-    <li>
-        <a href="#accuracy">Accuracy</a>
-    </li>
-	<li>
-        <a href="#split_data_into_train_and_test_sets">Split data into Train and Test sets</a>
-	</li>
-	<li>
-        <a href="#model_complexity">Model complexity</a>
-	</li>
-	<li>
-        <a href="#model_complexity_curve">Model complexity curve</a>
-	</li>
-	<li>
-        <a href="#exercises">Exercises</a>
-		<ul>
-			<li>
-        		<a href="#">Calculate the score using the test set</a>
-			</li>
-			<li>
-        		<a href="#">Model Complexity Curve</a>
-			</li>
-		</ul>
-	</li>
-</ul>
+# Index
+
+- Measuring model performance
+- Accuracy
+- Split data into Train and Test sets
+- Model complexity
+- Model complexity curve
+- Exercises
+  - Calculate the score using the test set
+  - Model Complexity Curve
 
 
-<h1 id="intro_measuring_model_performance">Measuring model performance</h1>
+## Measuring model performance
 
 Now that we know how to make predictions using a classifier. __How can we know 
 if a model is making correct predictions?__
 We can __evaluate its performance__.
 
-<h2 id="accuracy">Accuracy</h2>
+## Accuracy
 
 __In classification accuracy is a commonly used metric__.
 
@@ -80,7 +62,8 @@ print(knn.score(X_test, y_test))
 ```
 
 
-<h2 id="model_complexity">Model complexity</h2> 
+## Model complexity 
+
 Let's discuss how to interpret the hyperparameter K (number of neighbors). Recall that we 
 discussed __decision boundaries__, which are __thresholds for determining what label a model 
 assigns to an observation__.
@@ -147,7 +130,7 @@ The peak test accuracy actually occurs at around 13 neighbors.
 
 ![Peak performance with K](imgs/peak_performance_knn.png)
 
-<h2 id="exercises">Exercises</h2> 
+## Exercises 
 
 1. [Calculate the score with the test set](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/knn/01_knn_train_test_accuracy_comparison.py)
 2. [Model Complexity Curve](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/knn/02_knn_overfitting_underfitting.py)
