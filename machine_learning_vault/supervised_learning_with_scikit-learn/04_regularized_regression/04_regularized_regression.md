@@ -1,29 +1,11 @@
-<h1>Index</h1>
+# Index
+- Regularized Regression
+- Ridge Regression 
+- Lasso Regression
+- Linear regression with Ridge regularization         
 
-<ul>
-    <li>
-        <a href="#regularized_regression">
-            Regularized Regression
-        </a>
-    </li>
-    <li>
-        <a href="#ridge_regression">
-           Ridge Regression 
-        </a>
-    </li>
-    <li>
-        <a href="#lasso_regression">
-           Lasso Regression
-        </a>
-    </li>
-    <li>
-        <a href="#exercise_linear_regression_with_ridge_regularization">
-            Linear regression with Ridge regularization         
-        </a>
-    </li>
-</ul>
 
-<h2 id="regularized_regression">Regularized Regression</h2>
+## Regularized Regression
 
 __Regularized regression is a technique used to avoid overfitting.__
 
@@ -35,7 +17,7 @@ is common practice to __alter the loss function so that it penalizes large coeff
 is called _regularization_.__
 
 
-<h2 id="ridge_regression">Ridge Regression</h2>
+## Ridge Regression
 
 The first type of regularized regression that we'll look at is called _'Ridge'_. With ridge, 
 we use the __Ordinary Least Squares (OLS) loss function__.
@@ -90,7 +72,7 @@ print(scores)
 ```
 
 
-<h2 id="lasso_regression">Lasso Regression</h2>
+## Lasso Regression
 
 There is another type of regularization called _lasso_, where our __loss function is 
 our OLS loss function plus the absolute value of each coefficient multiplied by 
@@ -171,7 +153,8 @@ is the binary value for whether an individual has diabetes or not.
 __This type of feature selection is very important because it allows us to communicate results 
 to non-technical audiences.__
 
-<h2 id="exercise_linear_regression_with_ridge_regularization">Exercise</h2>
+## Exercise
+
 [Linear regression with Ridge regularization](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/03_linear_regression_with_ridge_regularization.py)
 
 
