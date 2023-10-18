@@ -1,30 +1,16 @@
-<h1>Index</h1>
-<ul>
-    <li>
-        <a href="#introduction_to_regression">Introduction to Regression</a>
-    </li>
-    <li>
-        <a href="#fitting_a_regression_model">Fitting a regression model</a>
-    </li>
-    <li>
-        <a href="#exercise_linear_regression_with_one_feature">Exercise: linear regression with one feature</a>
-    </li>
-    <li>
-        <a href="#basics_of_linear_regression">Basics of linear regression</a>
-    </li>
-    <li>
-        <a href="#rsquared">R-squared</a>
-    </li>
-    <li>
-        <a href="#mean_squared_error_and_root_mean_squared_error">Mean Squared Error and Root Mean Squared Error</a>
-    </li>
-    <li>
-        <a href="#exercise_rmse">Exercise: measure a linear regression model with RMSE</a>
-    </li>
-</ul>
+# Index
+- Introduction to Regression
+- Fitting a regression model
+- Exercise: linear regression with one feature
+- Basics of linear regression
+- R-squared
+- Mean Squared Error and Root Mean Squared Error
+- Exercise: measure a linear regression model with RMSE
+    
 
 
-<h2 id="introduction_to_regression">Introduction to Regression</h2>
+## Introduction to Regression
+
 In regression tasks, the __target variable has continuous values__, such a country's GDP, 
 or the price of a house.
 
@@ -92,10 +78,11 @@ plt.show()
 
 The relation between blood glucose and body mass index appear to have a moderate positive correlation.
 
-<h2 id="exercise_linear_regression_with_one_feature">Exercise</h2>
+## Exercise
+
 [Linear regression with one feature](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/00_linear_regression_with_one_feature.py)
 
-<h2 id="basics_of_linear_regression">Basics of linear regression</h2>
+## Basics of linear regression
 
 __We want to fit a line to the data__, and in 2 dimensions this takes the form of:
 
@@ -162,7 +149,7 @@ y_pred = reg_all.predict(X_test, y_test)
 
 __Linear regression performs OLS under the hood.__ 
 
-<h2 id="rsquared">R-squared</h2>
+## R-squared
 
 The __default metric for linear regression is R-squared__, which __quantifies the amount 
 of variance in the target variable that is explained by the features__.
@@ -184,7 +171,7 @@ In this case r_squared = 0.35. This means that the features only explain the 35%
 the blood glucose level variance.
 
 
-<h2 id="mean_squared_error_and_root_mean_squared_error">Mean Squared Error and Root Mean Squared Error</h2>
+## Mean Squared Error and Root Mean Squared Error
 
 Another way to __assess a regression model's performance__ is to take the __mean of the 
 residual sum of squares__, this is known as the ___Mean Squared Error (MSE)___.
@@ -212,5 +199,6 @@ This result means that the model has an average error for blood glucose levels
 of around 24 (mg/dl).
 
 
-<h2 id="exercise_rmse">Exercise</h2> 
+## Exercise 
+
 [Example of linear regression and calculate the RMSE](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/01_multiple_linear_regression.py)
