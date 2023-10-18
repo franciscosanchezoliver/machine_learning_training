@@ -1,19 +1,8 @@
-<h1>Index</h1>
+# Index
+- Cross Validation
+- Example of cross validation and R-squared
 
-<ul>
-    <li>
-        <a href="#cross_validation">
-            Cross Validation
-        </a>
-    </li>
-    <li>
-        <a href="#exercise_cross_val_with_linear_regression">
-            Example of cross validation and R-squared
-        </a>
-    </li>
-</ul>
-
-<h2 id="cross_validation">Cross Validation</h2>
+## Cross Validation
 
 We know now how to __split into train and test sets, and computing the model's 
 performance on our test set has a potential pitfall for this process.__
@@ -73,8 +62,6 @@ print(np.quantile(cv_results), [0.025, 0.975])
 # 0.7054, 0.7687
 ```
 
-<h2 id="exercise_cross_val_with_linear_regression">Exercise </h2>
+## Exercise 
 
-<a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/02_cross_val_for_r_squared.py">
-Example of cross validation and R-squared
-</a>
+[Example of cross validation and R-squared](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/regression/02_cross_val_for_r_squared.py)
