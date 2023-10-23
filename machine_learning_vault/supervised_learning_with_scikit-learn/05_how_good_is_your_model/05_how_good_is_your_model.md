@@ -73,11 +73,11 @@ $$ accuracy = \frac{t_p + t_n}{t_p + t_n + f_p + f_n} $$
 
 
 
-### Predictions
+### Precision
 
 Secondly, there are other important metrics we can calculate from the confusion matrix. 
 
-*Precision*, its the number of true positive divided by the sum of all positive predictions.
+*Precision*, its the number of **true positive divided by the sum of all positive predictions**.
 
 $$ precision = \frac {t_p} {t_p + f_p} $$
 
@@ -87,17 +87,17 @@ $$ precision = \frac {t_p} {t_p + f_p} $$
 | Actual: Fraudulent | False Negative        |     **True Positive**     |
 
 
-High precision means having a lower false positive rate.
+**High precision → lower false positive rate**.
 
 In our classifier, this would translates to fewer legitimate transactions being classified as fraudulent.
 
 ## Recall
 
-Is the number of true positives divided by the sum of true positives and false negatives. This is also called as '*sensitivity*'.
+Is the number of **true positives divided by the sum of true positives and false negatives**. This is also called as '*sensitivity*'.
 
 $$ recall = \frac {t_p} {t_p + f_n}  $$
 
-High recall reflects a lower false negative rate.
+**High recall → lower false negative rate.**
 
 For our classifier, it means predicting most fraudulent transactions correctly.
 
@@ -145,13 +145,39 @@ print(confusion_matrix(y_test, y_pred))
 
 # Passing the same arguments as in the confusion matrix to the
 # method "classification_report" outputs all the relevant metrics
-
 print(classification_report(y_test, y_pred))
 
+#                  precision   recall    f1-score  support
+#            0          0.86     0.99        0.92     1117
+#            1          0.76     0.16        0.26      217
+#
+#
+#     accuracy                               0.85     1334
+#    macro avg          0.81     0.57        0.59     1334
+# weighted avg          0.84     0.85        0.81     1334
 ```
 
+## Exercise: Deciding on a primary metric
 
+As you have seen, several metrics can be useful to evaluate the performance of classification models, including accuracy, precision, recall, and F1-score.
 
+In this exercise, you will be provided with three different classification problems, and your task is to **select the problem where precision is best suited as the primary metric**.
 
+-  [ ] A model predicting the presence of cancer as the positive class.
+	**This model should minimize the number of false negatives, so recall is a more appropriate metric.**
+	**High recall → lower false negative rate.**
+$$ recall = \frac {t_p} {t_p + f_n}  $$
 
+- [ ] A classifier predicting the positive class of a computer program containing malware.
+	To avoid installing malware, **false negatives should be minimized, hence recall or F1-score are better metrics for this model**.
+ 
+	**High recall → lower false negative rate.**
+$$ recall = \frac {t_p} {t_p + f_n}  $$
 
+-  [X] A model predicting if a customer is a high-value lead for a sales team with limited capacity.
+	Correct! With limited capacity, the sales team needs the model to return the highest proportion of true positives compared to all predicted positives, thus minimizing wasted effort.
+
+	**High precision → lower false positive rate**.
+$$ precision = \frac {t_p} {t_p + f_p} $$
+
+## Exercise: assessing a diabetes prediction classifier
