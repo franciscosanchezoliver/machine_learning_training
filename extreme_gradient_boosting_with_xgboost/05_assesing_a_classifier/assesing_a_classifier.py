@@ -1,7 +1,6 @@
 """
 Assessing a diabetes prediction classifier
 ------------------------------------------
-
 In this exercise you'll work with a diabetes dataset.
 
 The goal is to predict whether each individual is likely to have diabetes based on
@@ -47,7 +46,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,
 knn = KNeighborsClassifier(n_neighbors=5)
 
 # Train the model with the training set
-knn.fit(X_train, y_train)
+knn.fit(X_train, y_train.values.ravel())
 
 # Predict whether the individuals have diabetes in the test set
 y_pred = knn.predict(X_test)
@@ -55,6 +54,29 @@ y_pred = knn.predict(X_test)
 # Generate the confusion matrix and the classification report
 the_confusion_matrix = confusion_matrix(y_test, y_pred)
 the_classification_report = classification_report(y_test, y_pred)
+
+# True Negative: the individual doesn't have diabetes and the model got it right
+true_negative = the_confusion_matrix[0][0]
+
+# True Positive: the individual has diabetes and the model got it right
+true_positive = the_confusion_matrix[1][1]
+
+# False Negative: the model said that the individual doesn't have diabetes, but he has.
+# This is the worst case
+false_negative = the_confusion_matrix[1][0]
+
+# False Positive: the model said that the individual has diabetes, but he hasn't
+false_positive = the_confusion_matrix[0][1]
+
+print("""
+                       -----------------------------
+                      |  Not Diabetes   |  Diabetes
+--------------------------------------------------
+      | Not Diabetes  | True Negative   |  False Positive
+Real  -----------------------------------------------   
+      | Diabetes      |
+---------------------------------
+""")
 
 print(f"""
 Confusion matrix
@@ -68,6 +90,4 @@ Classification report
 {classification_report}
 """)
 
-print("hello")
-
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model-3?ex=3
+# https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model-3?ex=3
