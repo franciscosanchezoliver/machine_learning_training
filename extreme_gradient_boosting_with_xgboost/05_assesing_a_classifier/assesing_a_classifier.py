@@ -39,7 +39,8 @@ y = diabetes_df[target]
 # We'll use the 30% of the dataset for training.
 X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                     test_size=30,
-                                                    stratify=y)
+                                                    stratify=y,
+                                                    random_state=42)
 
 # Create a classification model.
 # For this case we'll use the KNN classifier model.
@@ -68,26 +69,75 @@ false_negative = the_confusion_matrix[1][0]
 # False Positive: the model said that the individual has diabetes, but he hasn't
 false_positive = the_confusion_matrix[0][1]
 
-print("""
-                       -----------------------------
-                      |  Not Diabetes   |  Diabetes
---------------------------------------------------
-      | Not Diabetes  | True Negative   |  False Positive
-Real  -----------------------------------------------   
-      | Diabetes      |
----------------------------------
+print(f"""
+                        -----------------------------------
+                       |              Predicted            |
+                        -----------------------------------
+                       |  Not Diabetes   |     Diabetes    |
+ ----------------------------------------------------------
+|      | Not Diabetes  | True Negative   |  False Positive |
+|Real  -----------------------------------------------------
+|      | Diabetes      | False Negative  |  True Positive  |
+ -----------------------------------------------------------
+ 
+{true_negative}   |  {false_positive} |
+{false_negative}  |  {true_positive}  |
+ 
+True Negatives ({true_negative}): The individual doesn't have diabetes and the model got it right.
+True Positives ({true_positive}): The individual has diabetes and the model got it right.
+
+
+!False Negative ({false_negative}): The model said that the individual doesn't have diabetes but 
+                                    the individual does have diabetes. This is the worst case.
+False Positive ({false_positive}): The model said that the individual has diabetes but the individual 
+                                   hasn't got diabetes.
+                                   
+We can check that the built in function confusion_matrix in sklearn gives the same
+output for the confusion matrix that we've just done.
+{the_confusion_matrix}
+
 """)
+
+# Now let's calculate the most important metrics that we can get from the confusion matrix
+
+# Accuracy
+# accuracy = (Tp + Tn) / (Tp + Tn + Fp + Fn)
+accuracy = (true_positive + true_negative) / (true_positive + true_negative + false_positive + false_negative)
+
+# Precision
+# Number of true positives divided by the sum of all positives predictions
+# precision = Tp / (Tp + Fp)
+precision = true_positive / (true_positive + false_positive)
+
+# Recall
+# Number of true positives divided by the sum of true positives and false negatives.
+#
+# recall = Tp / (Tp + Fn)
+#
+# For this problem this is the most important metrics, as we could predict that someone
+# hasn't got diabetes when he has.
+recall = true_positive / (true_positive + false_negative)
+
+# F1-Score
+# It's the harmonic mean between precision and recall.
+# This metric gives equal weight to precision and recall. Therefore, it factors
+# in both the number of errors made by the model and the type of error.
+# For this problem I think that the recall its more important that the precision.
+# But let's calculate the F1-Score anyway.
+# F1-Score = 2 * (precision * recall) / (precision + recall)
+f1_score = 2 * (precision * recall) / (precision + recall)
+
+# We can retrieve all this information with the function "classification_report" from sklearn.
+
 
 print(f"""
-Confusion matrix
-----------------
-{confusion_matrix}
-""")
+Metrics from confusion matrix
+-----------------------------
+Accuracy: {accuracy}
+Precision {precision}
+!Recall: {recall}
+F1-Score: {f1_score}
 
-print(f"""
-Classification report
----------------------
-{classification_report}
+We can get the same results by calling the function from scikit learn:
+{the_classification_report}
 """)
-
-# https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model-3?ex=3
