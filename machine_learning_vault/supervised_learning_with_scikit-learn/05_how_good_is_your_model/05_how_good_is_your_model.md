@@ -1,33 +1,45 @@
-https://campus.datacamp.com/courses/supervised-learning-with-scikit-learn/fine-tuning-your-model-3?ex=1
 
-thinking back to classification problems recall that we can use accuracy, the fraction of correctly classified labels, to measure model performance. 
+# How good is your classification model?
+
+
+We've used accuracy in classificatino problems to measure the fraction 
+of correctly classified labels. 
 
 $$accuracy = \frac {correct\ predictions} {total\ observation} $$
 
-However, accuracy is not always an useful metrics. 
+However, accuracy isn't always a useful metrics. 
 
-Consider a model for predicting whether a bank transaction is fraudulent, where only 1% of transactions are actually fraudulent.
+Consider a model for predicting whether a bank transaction is fraudulent 
+where only 1% of transactions are actually fraudulent.
+
 - 99% legitimate transactions
 - 1% fraudulent transactions
 
-We could build a model that classifies every transaction as legitimate, this model would have an accuracy of 99%. However it does a terrible job of actually predicting fraud, so it fails at its original purpose.
+## Class imbalance
+
+We could build a model that classifies every transaction as legitimate, this 
+model would have an accuracy of 99%. However, it does a terrible job of 
+actually predicting fraud, so it fails at its original purpose.
 
 The situation where one __class is more frequent is called _'class imbalance'____.
 
-Here, the class of fraudulent transactions contains more instances that the class of legitimate transactions.
+Here, the class of fraudulent transactions contains more instances that the 
+class of legitimate transactions.
 
-This is a common situation in practice, and require a different approach to assessing the model's performance.
+This is a common situation in practice, and require a different approach to 
+assessing the model's performance.
 
+## Confusion matrix
 
-Given a binary classifier, such as our fraudulent transaction example. We can create a 2 by 2 matrix that summarizes performance called a _'confusion matrix'_.
-
+Given a binary classifier, such as our fraudulent transaction example. We can 
+create a 2 by 2 matrix that summarizes performance called a _'confusion matrix'_.
 
 |                    | Predicted: Legitimate | Predicted: Fraudulent |
 |--------------------|-----------------------|-----------------------|
 | Actual: Legitimate | True Negative         |     False Positive    |
 | Actual: Fraudulent | False Negative        |     True Positive     |
 
-Given any model, we can fill in the confusion matrix according to its predictions.
+Given any model, we can fill the confusion matrix according to its predictions.
 
 The true positive are the number of fraudulent transactions correctly labeled.
 
@@ -43,14 +55,12 @@ The true negatives are the number of legitimate transactions correctly labeled.
 | Actual: Legitimate | **True Negative**         |     False Positive    |
 | Actual: Fraudulent | False Negative        |     True Positive     |
 
-
 The false negatives are the number of legitimate transactions incorrectly labeled
 
 |                    | Predicted: Legitimate | Predicted: Fraudulent |
 |--------------------|-----------------------|-----------------------|
 | Actual: Legitimate | True Negative         |     False Positive    |
 | Actual: Fraudulent | **False Negative**        |     True Positive     |
-
 
 The false positives are the number of transactions incorrectly labeled as fraudulent
 
@@ -65,19 +75,18 @@ As, we aim to detect fraud, the positive class is an illegitimate transaction.
 
 ## Why is the confusion matrix so important
 
+It's so important because we can calculate several metrics from it.
+
 ### Accuracy
 
-Firstly, we can retrieve 'accuracy', which is the sum of true predictions divided by the total sum of the matrix:
+The sum of true predictions divided by the total sum of the matrix:
 
 $$ accuracy = \frac{t_p + t_n}{t_p + t_n + f_p + f_n} $$
 
 
-
 ### Precision
 
-Secondly, there are other important metrics we can calculate from the confusion matrix. 
-
-*Precision*, its the number of **true positive divided by the sum of all positive predictions**.
+It's the number of **true positive divided by the sum of all positive predictions**.
 
 $$ precision = \frac {t_p} {t_p + f_p} $$
 
@@ -89,11 +98,15 @@ $$ precision = \frac {t_p} {t_p + f_p} $$
 
 **High precision → lower false positive rate**.
 
-In our classifier, this would translates to fewer legitimate transactions being classified as fraudulent.
+In our classifier, this would translate to fewer legitimate transactions being 
+classified as fraudulent.
 
 ## Recall
 
-Is the number of **true positives divided by the sum of true positives and false negatives**. This is also called as '*sensitivity*'.
+Is the number of **true positives divided by the sum of true positives and 
+false negatives**. 
+
+This metric is also called as '*sensitivity*'.
 
 $$ recall = \frac {t_p} {t_p + f_n}  $$
 
@@ -104,14 +117,15 @@ For our classifier, it means predicting most fraudulent transactions correctly.
 
 ## F1 Score
 
-The F1-score is the harmonic mean of precision and recall.
+**It's the harmonic mean of precision and recall.**
 
 $$ F1\ Score =  2 * \frac {precision * recall} {precision + recall} $$
 
-This metric gives equal weight to precision and recall. Therefore, it factors in both the number of errors made by the model and the type of errors.
+This metric **gives equal weight to precision and recall**. Therefore, **it factors 
+in both the number of errors made by the model and the type of errors.**
 
-
-F1 score favors models with similar precision and recall, and it is useful metric if we seek a model which performs reasonably well across both metrics.
+**F1 score favors models with similar precision and recall**, and it is useful 
+metric if we seek a model which performs reasonably well across both metrics.
 
 
 ## Code to calculate the confusion matrix
@@ -159,20 +173,24 @@ print(classification_report(y_test, y_pred))
 
 ## Exercise: Deciding on a primary metric
 
-As you have seen, several metrics can be useful to evaluate the performance of classification models, including accuracy, precision, recall, and F1-score.
+As you have seen, several metrics can be useful to evaluate the performance 
+of classification models, including: accuracy, precision, recall, and F1-score.
 
-In this exercise, you will be provided with three different classification problems, and your task is to **select the problem where precision is best suited as the primary metric**.
+In this exercise, you will be provided with three different classification problems, and 
+your task is to **select the problem where precision is best suited as the primary metric**.
 
 -  [ ] A model predicting the presence of cancer as the positive class.
-	**This model should minimize the number of false negatives, so recall is a more appropriate metric.**
-	**High recall → lower false negative rate.**
-$$ recall = \frac {t_p} {t_p + f_n}  $$
+		**This model should minimize the number of false negatives, so recall is a 
+	 	more appropriate metric.**
+		**High recall → lower false negative rate.**
+		$$ recall = \frac {t_p} {t_p + f_n}  $$
 
-- [ ] A classifier predicting the positive class of a computer program containing malware.
-	To avoid installing malware, **false negatives should be minimized, hence recall or F1-score are better metrics for this model**.
+  - [ ] A classifier predicting the positive class of a computer program containing malware.
+      To avoid installing malware, **false negatives should be minimized, 
+      hence recall or F1-score are better metrics for this model**.
  
-	**High recall → lower false negative rate.**
-$$ recall = \frac {t_p} {t_p + f_n}  $$
+      **High recall → lower false negative rate.**
+  		$$ recall = \frac {t_p} {t_p + f_n}  $$
 
 -  [X] A model predicting if a customer is a high-value lead for a sales team with limited capacity.
 	Correct! With limited capacity, the sales team needs the model to return the highest proportion of true positives compared to all predicted positives, thus minimizing wasted effort.
@@ -181,3 +199,4 @@ $$ recall = \frac {t_p} {t_p + f_n}  $$
 $$ precision = \frac {t_p} {t_p + f_p} $$
 
 ## Exercise: assessing a diabetes prediction classifier
+

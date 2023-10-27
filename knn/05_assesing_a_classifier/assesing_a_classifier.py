@@ -25,7 +25,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 import pandas as pd
 
 # Read the dataset
-diabetes_df = pd.read_csv('./diabetes_clean.csv')
+diabetes_df = pd.read_csv('diabetes_clean.csv')
 
 # Select the features and the target.
 # We will use Body Mass Index (BMI) and the age as the features to predict whether
