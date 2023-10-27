@@ -24,6 +24,16 @@
           Cross validation 
         </a>
     </li>
+    <li>
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/machine_learning_vault/supervised_learning_with_scikit-learn/04_regularized_regression/04_regularized_regression.md">
+          Regularized regression
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/machine_learning_vault/supervised_learning_with_scikit-learn/05_how_good_is_your_model/05_how_good_is_your_model.md">
+          How good is your classification model?
+        </a>
+    </li>
 </ul>
 
 
