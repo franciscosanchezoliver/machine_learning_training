@@ -199,4 +199,4 @@ your task is to **select the problem where precision is best suited as the prima
 $$ precision = \frac {t_p} {t_p + f_p} $$
 
 ## Exercise: assessing a diabetes prediction classifier
-
+[Classifying whether an individual has diabetes](https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/knn/05_assesing_a_classifier/assesing_a_classifier.py)
