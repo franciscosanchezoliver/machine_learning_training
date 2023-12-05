@@ -1,4 +1,7 @@
 venv/*
+**/venv/*
 .idea/*
 */.obsidian/*
 todo
+**/mlruns
+*.db
