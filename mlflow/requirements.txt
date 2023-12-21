@@ -1,9 +1,10 @@
 scikit-learn
 pandas
 mlflow
-tensorflow
-ipykernel
-catboost
+#tensorflow
+# setuptools
+# ipykernel
+#catboost
 #numpy
 #matplotlib
 #tensorflow-addons
