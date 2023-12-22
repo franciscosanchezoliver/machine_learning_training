@@ -4,6 +4,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+import pandas as pd
 
 # Selecting the tracking URI
 # --------------------------
@@ -165,5 +166,48 @@ with mlflow.start_run():
         registered_model_name = "Logistic Regression idea for Iris"
     )
 
+    for each_attribute in dir(model_info):
 
-print("end")
+        # Skip private attributes
+        if each_attribute.startswith("_"):
+            continue
+
+        print(each_attribute)
+        try:
+            attribute_result = model_info.__getattribute__(each_attribute)
+            
+            print("\n" + each_attribute)
+            print("-" * len(each_attribute))
+            print(attribute_result)
+        except: 
+            print(f"Could't reed attribute {each_attribute}")
+
+
+
+
+
+# Load the model to do predictions
+
+# Although we can load the model as a scikit-learn model using (mlflow.sklearn.load_model())
+# in this case we are going to load the model as a python function, which is how the model
+# would be loaded for online model serving. 
+# We can use the "pyfunc" representation for batch use cases.
+
+print("Loading model: {model_info.model_uri}")
+loaded_model = mlflow.pyfunc.load_model(model_info.model_uri)
+
+# We can predict with the loaded model
+print("Doing predictions with the loaded model")
+predictions = loaded_model.predict(X_test)
+print(f"Predictions: {predictions}")
+
+# Create a dataframe with a test data 
+test_data = pd.DataFrame(X_test, columns = iris_data.feature_names)
+test_data['real_class'] = y_test
+
+# Add the predictions done on the test data
+test_data['predicted_class'] = predictions
+
+print("Predictions done on test data (show a few rows)")
+print(test_data.head(4))
+
