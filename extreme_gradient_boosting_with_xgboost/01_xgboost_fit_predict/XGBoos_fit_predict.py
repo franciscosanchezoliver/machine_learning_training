@@ -1,10 +1,6 @@
 """
  XGBoost: Fit/Predict
  --------------------
- It's time to create your first XGBoost model! As Sergey showed you in the video, you can use the
- scikit-learn .fit() / .predict() paradigm that you are already familiar to build your XGBoost models,
- as the xgboost library has a scikit-learn compatible API!
-
  Here, you'll be working with churn data. This dataset contains imaginary data from a ride-sharing
  app with user behaviors over their first month of app usage in a set of imaginary cities as well
  as whether they used the service 5 months after sign-up. It has been preloaded for you into
