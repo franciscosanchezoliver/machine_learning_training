@@ -4,13 +4,11 @@
 ## Index
 
 <ul>
-
     <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/machine_learning_vault/supervised_learning_with_scikit-learn/00_machine_learning_with_scikit_learn/00_machine_learning_with_scikit_learn.md">
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/ciencia_de_datos_desde_cero_oreilly/4_algebra_lineal/Vectors.md">
             Introduction to machine learning
         </a>
     </li>
-
     <li>
         <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/machine_learning_vault/supervised_learning_with_scikit-learn/00_machine_learning_with_scikit_learn/00_machine_learning_with_scikit_learn.md">
             Introduction to machine learning
