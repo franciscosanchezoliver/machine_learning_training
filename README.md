@@ -6,7 +6,7 @@
 <ul>
     <li>
         <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/ciencia_de_datos_desde_cero_oreilly/4_algebra_lineal/Vectors.md">
-            Introduction to machine learning
+            Vectors
         </a>
     </li>
     <li>
