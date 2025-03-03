@@ -1,0 +1,3 @@
+[Integrating Document Loaders](developing_llm_applications_with_langchain/retrieval_augmented_generation/Integrating%20Document%20Loaders.md)
+[Splitting External Data For Retrieval](developing_llm_applications_with_langchain/retrieval_augmented_generation/Splitting%20External%20Data%20For%20Retrieval.md)
+

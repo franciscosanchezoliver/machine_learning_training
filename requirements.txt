@@ -1,0 +1,10 @@
+xgboost
+pandas
+numpy
+scikit-learn
+matplotlib
+jupyterlab
+mlflow
+setuptools 
+black
+xgboost

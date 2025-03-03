@@ -1,0 +1,14 @@
+venv/*
+**/venv/*
+.venv/*
+**/.venv/*
+.idea/*
+*/.obsidian/*
+todo
+**/mlruns
+*.db
+.vscode/
+.obsidian/
+*.pyc
+*checkpoint*
+*~*

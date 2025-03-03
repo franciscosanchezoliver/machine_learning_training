@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"3cf39ae16b8bac8e","type":"group","x":-203,"y":-5,"width":377,"height":100,"label":"Retrieval (Optional)"},
+		{"id":"ecbd0a5323c12b34","type":"text","text":"Storage","x":-183,"y":20,"width":123,"height":50},
+		{"id":"1bf62e34e38e09e3","type":"text","text":"Retrieved Chunks","x":20,"y":15,"width":134,"height":60},
+		{"id":"880e0966f4dc2810","type":"text","text":"Question","x":-440,"y":160,"width":140,"height":60},
+		{"id":"924cbd6d423165f7","type":"file","file":"images/memory.png","x":-3,"y":220,"width":180,"height":180},
+		{"id":"c29f531849eddc87","type":"text","text":"Prompt","x":300,"y":160,"width":120,"height":60},
+		{"id":"14fd010049e634eb","type":"text","text":"LLM","x":500,"y":160,"width":100,"height":60},
+		{"id":"3b7d1d96bbaa835c","type":"text","text":"Answer","x":680,"y":160,"width":120,"height":60}
+	],
+	"edges":[
+		{"id":"a99564fb5a8d6f28","fromNode":"880e0966f4dc2810","fromSide":"right","toNode":"ecbd0a5323c12b34","toSide":"left"},
+		{"id":"7e4a2fcdebaceabc","fromNode":"ecbd0a5323c12b34","fromSide":"right","toNode":"1bf62e34e38e09e3","toSide":"left"},
+		{"id":"db79e541093f0e6c","fromNode":"924cbd6d423165f7","fromSide":"right","toNode":"c29f531849eddc87","toSide":"left"},
+		{"id":"5bde40e1688089e0","fromNode":"3cf39ae16b8bac8e","fromSide":"right","toNode":"c29f531849eddc87","toSide":"left"},
+		{"id":"ba40c428b5a3b568","fromNode":"c29f531849eddc87","fromSide":"right","toNode":"14fd010049e634eb","toSide":"left"},
+		{"id":"c816db424c34e7da","fromNode":"14fd010049e634eb","fromSide":"right","toNode":"3b7d1d96bbaa835c","toSide":"left"},
+		{"id":"b536449fbbe14047","fromNode":"3b7d1d96bbaa835c","fromSide":"bottom","toNode":"924cbd6d423165f7","toSide":"bottom"}
+	]
+}

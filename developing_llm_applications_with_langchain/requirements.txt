@@ -1,0 +1,6 @@
+langchain-huggingface
+langchain
+langchain-community
+pypdf
+langchain-chroma
+langchain-openai
