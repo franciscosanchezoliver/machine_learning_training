@@ -16,3 +16,29 @@ Invoke-RestMethod -Method POST `
   } | ConvertTo-Json)
 
 ```
+
+
+launch.json for debugging in vscode.
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "FastAPI: Run with Uvicorn",
+        "type": "python",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": [
+          "summarizer_api_point:app",
+          "--host", "0.0.0.0",
+          "--port", "9999",
+          "--reload"
+        ],
+        "jinja": true,
+        "justMyCode": true
+      }
+    ]
+  }
+
+
+```
