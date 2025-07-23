@@ -39,6 +39,14 @@
           How good is your classification model?
         </a>
     </li>
+    <li>
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/GenerativeAIinthemachinelearninglandscape.md">
+          Generative AI in the machine learning landscape
+        </a>
+    </li>
+
+
+    
 </ul>
 
 
