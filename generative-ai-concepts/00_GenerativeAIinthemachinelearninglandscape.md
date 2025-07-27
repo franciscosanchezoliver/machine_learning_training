@@ -56,14 +56,43 @@ They compete with one another, one trying to trick the other.
 2. __The Discriminator tries to guess correctly__.
 3. __Afterwards, they share notes and each gets better over time__.
 
+A generator model tries to create fake data that looks indistinguishable from
+real data. 
+A discriminator tries to tell the difference between real and fake data.
+
 After each round, they compare notes and each model learns from the result.
 
+The 2 models compete with each other over many rounds until the generator 
+gets very good at creating bagel pictures that are so puppy-like or vice versa
+that they fool the discriminator.
 
 
 
+But where is this all headed?
+A long time goal of the Artificial Intelligence community is to create 
+generative AIs that exhibit human-like intelligence.
+
+Beyond just generating new data similar to previous data, be able to reason 
+across different domains, possess social skills for interacting with humans, 
+have the ability to think creatively and reason critically.
+
+Finally, AGI would have other human-like cognitive competencies, such as sight
+and language.
 
 
+Now that we understand how discriminative models, generative AI, and AGI relate, 
+we can consider which type applies in different situations.
 
+- Discriminative models: 
+  - Predict weather
+  - Categorize books
+  - Classify if a picture is a puppy or a bagel
+- Generative AI:
+  - Write code for a website
+  - Answer unique customer service questions
+  - Draw a picture of a cat scuba driving
+- AGI (Artificial General Intelligence):
+  - Complete traditionally human jobs
 
 
 

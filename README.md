@@ -40,7 +40,7 @@
         </a>
     </li>
     <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/GenerativeAIinthemachinelearninglandscape.md">
+        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/00_GenerativeAIinthemachinelearninglandscape.md">
           Generative AI in the machine learning landscape
         </a>
     </li>
