@@ -40,24 +40,29 @@
         </a>
     </li>
     <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/00_GenerativeAIinthemachinelearninglandscape.md">
-          Generative AI in the machine learning landscape
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/01_TheEvolutionOfGenerativeAI.md">
-            The Evolution of Generative AI
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/02_ModelDesignAndDataCollection.md">
-            Model Design and Data Collection
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/03_ModelTraining.md">
-            Model Training
-        </a>
+        Generative AI
+        <ul>
+            <li>
+                <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/00_GenerativeAIinthemachinelearninglandscape.md">
+                Generative AI in the machine learning landscape
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/01_TheEvolutionOfGenerativeAI.md">
+                    The Evolution of Generative AI
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/02_ModelDesignAndDataCollection.md">
+                    Model Design and Data Collection
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/franciscosanchezoliver/machine_learning_training/blob/main/generative-ai-concepts/03_ModelTraining.md">
+                    Model Training
+                </a>
+            </li>
+        </ul>
     </li>
     
 </ul>
