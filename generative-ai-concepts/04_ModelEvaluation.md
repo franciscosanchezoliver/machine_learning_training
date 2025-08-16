@@ -12,3 +12,10 @@ Quality evaluation serves several key purposes.
 First, evaluation measures progress as we train models longer or change 
 their design.
 
+Second, evaluation allows model comparison rigorously so we can determine which
+model work best for which tasks.
+
+
+Finally, evaluation can benchmark generative AI against human performance.
+
+
