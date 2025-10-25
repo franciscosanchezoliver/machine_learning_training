@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run app (Shared AI env)",
+            "type": "debugpy", 
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal", 
+            "python": "/home/void/shared_llm_env/bin/python",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

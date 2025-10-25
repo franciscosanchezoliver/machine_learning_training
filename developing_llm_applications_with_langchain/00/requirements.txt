@@ -1,0 +1,8 @@
+langchain
+langchain-community
+langchain-huggingface
+openai
+transformers
+torch
+sentencepiece
+huggingface_hub
